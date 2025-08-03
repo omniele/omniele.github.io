@@ -1,1 +1,180 @@
-index.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>万象苹果免费小火箭ID共享网</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --red:#ff4757;
+      --blue:#3742fa;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
+
+    /* 动态背景 */
+    body{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      animation:bgLoop 20s infinite linear;
+    }
+    @keyframes bgLoop{
+      0%   {background:#ffeaa7;}
+      20%  {background:#fab1a0;}
+      40%  {background:#fd79a8;}
+      60%  {background:#a29bfe;}
+      80%  {background:#74b9ff;}
+      100% {background:#ffeaa7;}
+    }
+
+    /* 跑马灯 */
+    .marquee{
+      background:var(--red);
+      color:#fff;
+      font-size:.9rem;
+      white-space:nowrap;
+      overflow:hidden;
+      padding:4px 0;
+    }
+    .marquee span{
+      display:inline-block;
+      padding-left:100%;
+      animation:marquee 12s linear infinite;
+    }
+    @keyframes marquee{
+      to{transform:translateX(-100%);}
+    }
+
+    /* 标题区 */
+    .hero{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:16px;
+    }
+    .hero img{height:32px;}
+    .hero h1{font-size:1.5rem;color:#fff;text-shadow:0 0 4px #0003;}
+
+    /* 步骤文字 */
+    .steps{
+      background:#ffffff33;
+      margin:0 16px 12px;
+      padding:12px 20px;
+      border-left:4px solid var(--red);
+      font-size:.9rem;
+      line-height:1.7;
+      color:#fff;
+      border-radius:4px;
+    }
+
+    /* 音乐播放器 */
+    .music-player{
+      margin:0 16px 16px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:.8rem;
+      color:#fff;
+    }
+    .music-player audio{height:28px;width:100%;outline:none;}
+
+    /* 双列按钮 */
+    .btn-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      padding:16px;
+    }
+    .btn-grid a{
+      background:#ffffff33;
+      color:#fff;
+      text-decoration:none;
+      padding:12px 8px;
+      border-radius:8px;
+      text-align:center;
+      font-size:.85rem;
+      transition:.2s;
+      border:1px solid #ffffff55;
+    }
+    .btn-grid a:hover{background:#ffffff55;}
+
+    /* 内嵌 iframe */
+    .embed-wrapper{
+      margin:0 16px 16px;
+    }
+    .embed-wrapper iframe{
+      width:100%;
+      height:320px;
+      border:none;
+      border-radius:8px;
+    }
+
+    footer{
+      text-align:center;
+      padding:10px;
+      font-size:.7rem;
+      color:#ffffffaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 跑马灯 -->
+  <div class="marquee">
+    <span>🔔 万象苹果共享小火箭 - 免费账号每日更新 - 关注 Telegram 频道获取第一手节点！</span>
+  </div>
+
+  <!-- 标题 + Logo -->
+  <div class="hero">
+    <img src="https://cdn-icons-png.flaticon.com/512/1584/1584892.png" alt="logo">
+    <h1>万象苹果共享小火箭</h1>
+  </div>
+
+  <!-- 步骤 -->
+  <ol class="steps">
+    <li>打开 iPhone/iPad 的蓝色 <strong>App Store</strong>（不要点设置）。</li>
+    <li>右上角点头像 → 滑到最底 → <strong>退出登录</strong>。</li>
+    <li>复制下方账号与密码。</li>
+    <li>登录时若提示 Apple ID 安全，选 <strong>其他选项 → 不升级</strong>。</li>
+    <li>搜索 <strong>Shadowrocket</strong> 并下载。</li>
+    <li>下载完成后务必<strong>退出登录</strong>，防止设备被锁！</li>
+  </ol>
+
+  <!-- 音乐播放器（默认静音，可循环） -->
+  <div class="music-player">
+    <span>🎵</span>
+    <audio controls loop muted>
+      <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+      您的浏览器不支持音频。
+    </audio>
+  </div>
+
+  <!-- 双列按钮 -->
+  <div class="btn-grid">
+    <a href="https://t.me/xxx" target="_blank">免费节点订阅</a>
+    <a href="https://t.me/xxx" target="_blank">关注 TG 频道</a>
+    <a href="https://xxx.com/iptv" target="_blank">免费 IPTV 订阅</a>
+    <a href="https://xxx.com/tvbox" target="_blank">免费 TVbox 接口</a>
+    <a href="https://blog.xxx.com" target="_blank">关注我的博客</a>
+    <a href="https://github.com/xxx" target="_blank">关注我的 GitHub</a>
+  </div>
+
+  <!-- 内嵌账号站点 -->
+  <div class="embed-wrapper">
+    <iframe src="https://stymei.github.io/acc.html" title="共享账号"></iframe>
+  </div>
+
+  <footer>
+    © 2025 万象苹果 | TG 频道 | GitHub
+  </footer>
+
+  <script>
+    /* 复制到剪贴板示例 */
+    function copy(text){
+      navigator.clipboard.writeText(text);
+      alert('已复制：' + text);
+    }
+  </script>
+</body>
+</html>
+
