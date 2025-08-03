@@ -7,98 +7,43 @@
   <style>
     :root{--accent:#4f7bff;}
     *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
-    body{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      animation:bgLoop 24s infinite linear;
-    }
+    body{min-height:100vh;display:flex;flex-direction:column;animation:bgLoop 24s infinite linear;}
     @keyframes bgLoop{
       0%{background:#1f2b6b;}25%{background:#3f51b5;}50%{background:#0091ea;}
       75%{background:#00bfa5;}100%{background:#1f2b6b;}
     }
-
-    /* 跑马灯（青蓝渐变） */
-    .marquee{
-      background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%);
-      color:#fff;
-      font-size:.9rem;white-space:nowrap;overflow:hidden;padding:6px 0;
-    }
+    .marquee{background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%);color:#fff;font-size:.9rem;white-space:nowrap;overflow:hidden;padding:6px 0;}
     .marquee span{display:inline-block;padding-left:100%;animation:marquee 12s linear infinite;}
     @keyframes marquee{to{transform:translateX(-100%);}}
 
-    /* Shadowrocket 大图 */
-    .hero-banner{width:100%;max-height:200px;object-fit:cover;}
+    .logo-wrap{display:flex;justify-content:center;margin:16px;}
+    .logo{width:120px;height:120px;object-fit:contain;border:3px solid #fff;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.25);}
 
-    /* 毛玻璃卡片通用 */
-    .glass{
-      background:rgba(255,255,255,.15);
-      backdrop-filter:blur(10px);
-      border:1px solid rgba(255,255,255,.25);
-      border-radius:12px;
-      margin:0 16px 16px;
-      padding:16px;
-      color:#fff;
-      box-shadow:0 4px 14px rgba(0,0,0,.2);
-    }
-
-    /* 标题区 */
-    .hero{display:flex;align-items:center;gap:12px;padding:16px;}
-    .hero h1{font-size:1.5rem;color:#fff;text-shadow:0 0 4px #0003;}
-
-    /* 步骤文字 */
+    .glass{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:16px;margin:0 12px 12px;padding:14px;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.2);}
+    .hero h1{text-align:center;font-size:1.4rem;color:#fff;text-shadow:0 0 4px #0003;}
     .steps{font-size:.9rem;line-height:1.7;}
-
-    /* 音乐播放器（高 64px） */
-    .music-player{display:flex;align-items:center;gap:8px;}
-    .music-player audio{height:64px;width:100%;outline:none;}
-
-    /* 双列按钮网格 */
-    .btn-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:10px;
-    }
-    .btn-grid a{
-      background:rgba(255,255,255,.15);
-      color:#fff;
-      text-decoration:none;
-      padding:12px 8px;
-      border-radius:8px;
-      text-align:center;
-      font-size:.85rem;
-      transition:.2s;
-      border:1px solid rgba(255,255,255,.25);
-    }
+    .btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .btn-grid a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:12px 8px;border-radius:10px;text-align:center;font-size:.85rem;border:1px solid rgba(255,255,255,.25);}
     .btn-grid a:hover{background:rgba(255,255,255,.25);}
 
-    /* 内嵌 iframe */
-    .embed-wrapper iframe{
-      width:100%;
-      height:320px;
-      border:none;
-      border-radius:12px;
-    }
+    /* 全宽播放器 */
+    .music-player{padding:0;}
+    .music-player iframe{width:100%;height:140px;border-radius:10px;}
 
+    .scroll-box{margin:0 12px 12px;border-radius:16px;height:420px;overflow:auto;-webkit-overflow-scrolling:touch;box-shadow:0 4px 12px rgba(0,0,0,.2);}
+    .scroll-box iframe{width:100%;height:600px;border:none;}
     footer{text-align:center;padding:10px;font-size:.7rem;color:#ffffffaa;}
   </style>
 </head>
 <body>
+  <div class="marquee"><span>🔔 万象苹果共享小火箭 - 免费账号每日更新 - 关注 Telegram 频道！</span></div>
 
-  <!-- 跑马灯 -->
-  <div class="marquee">
-    <span>🔔 万象苹果共享小火箭 - 免费账号每日更新 - 关注 Telegram 频道！</span>
+  <div class="logo-wrap">
+    <img class="logo" src="https://upload.cc/i1/2025/08/03/evN6ki.png" alt="Shadowrocket">
   </div>
 
-  <!-- Shadowrocket 大图 -->
-  <img class="hero-banner" src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/4e/0f/9b/4e0f9b5e-7f5c-9d8d-3b09-6e3e8606d659/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.png" alt="Shadowrocket">
+  <div class="glass hero"><h1>万象苹果共享小火箭</h1></div>
 
-  <!-- 标题 + Logo（毛玻璃） -->
-  <div class="hero glass">
-    <h1>万象苹果共享小火箭</h1>
-  </div>
-
-  <!-- 步骤文字（毛玻璃） -->
   <ol class="steps glass">
     <li>打开 iPhone/iPad 的蓝色 <strong>App Store</strong>（不要点设置）。</li>
     <li>右上角点头像 → 滑到最底 → <strong>退出登录</strong>。</li>
@@ -108,36 +53,33 @@
     <li>下载完成后务必<strong>退出登录</strong>，防止设备被锁！</li>
   </ol>
 
-  <!-- 音乐播放器（毛玻璃） -->
-  <div class="music-player glass">
-    <span>🎵</span>
-    <audio controls loop muted>
-      <source src="https://cdn.jsdelivr.net/gh/anars/blank-audio@master/250-milliseconds-of-silence.mp3" type="audio/mpeg">
-      您的浏览器不支持音频。
-    </audio>
+  <!-- 全宽网易云播放器 -->
+  <div class="glass music-player">
+    <iframe
+      frameborder="0"
+      width="100%"
+      height="140"
+      src="https://music.163.com/outchain/player?type=2&id=1424979&auto=0&height=110"
+      allow="autoplay"
+      style="border-radius:10px;">
+    </iframe>
   </div>
 
-  <!-- 双列按钮（毛玻璃） -->
-  <div class="btn-grid glass">
+  <div class="glass btn-grid">
     <a href="https://t.me/omniele" target="_blank">免费节点订阅</a>
-    <a href="https://t.me/omniele" target="_blank">关注 TG 频道</a>
+    <a href="https://t.me/freeV2rayi" target="_blank">关注 TG 频道</a>
     <a href="https://omniele.github.io/iptv" target="_blank">免费 IPTV 订阅</a>
     <a href="https://omniele.github.io/tvbox" target="_blank">免费 TVbox 接口</a>
-    <a href="https://omniele.github.io/blog" target="_blank">关注我的博客</a>
-    <a href="https://github.com/omniele" target="_blank">关注我的 GitHub</a>
+    <a href="https://corich.cc" target="_blank">友链博客</a>
+    <a href="https://github" target="_blank">关注我的 GitHub</a>
   </div>
 
-  <!-- 内嵌账号站点（毛玻璃） -->
-  <div class="embed-wrapper glass">
-    <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496" title="共享账号"></iframe>
+  <div class="scroll-box">
+    <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496" allow="clipboard-write" scrolling="yes"></iframe>
   </div>
 
-  <footer>
-    © 2025 万象苹果 | TG 频道 | GitHub
-  </footer>
-
+  <footer>© 2025 万象苹果 | TG 频道 | GitHub</footer>
   <script>
-    /* 复制到剪贴板示例 */
     function copy(text){
       navigator.clipboard.writeText(text);
       alert('已复制：' + text);
