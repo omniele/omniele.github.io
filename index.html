@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <!-- 基础 SEO TDK -->
   <meta charset="UTF-8">
-  <title>万象苹果免费小火箭ID共享网</title>
+  <title>万象苹果免费小火箭ID共享网 | 海外苹果ID免费共享 Shadowrocket 下载</title>
+  <meta name="description" content="每日更新美国/香港/台湾等海外苹果ID账号，免费下载 Shadowrocket 小火箭，免费节点订阅、IPTV、TVbox 接口，一键导入即用。">
+  <meta name="keywords" content="海外苹果ID,Shadowrocket,免费节点,IPTV,TVbox,小火箭下载,免费苹果ID,美区账号">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     :root{--accent:#4f7bff;}
     *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
-    body{min-height:100vh;display:flex;flex-direction:column;animation:bgLoop 24s infinite linear;}
-    @keyframes bgLoop{
-      0%{background:#1f2b6b;}25%{background:#3f51b5;}50%{background:#0091ea;}
-      75%{background:#00bfa5;}100%{background:#1f2b6b;}
+    /* 更绚烂背景渐变 */
+    body{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      animation:bgLoop 20s infinite linear;
     }
-    .marquee{background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%);color:#fff;font-size:.9rem;white-space:nowrap;overflow:hidden;padding:6px 0;}
+    @keyframes bgLoop{
+      0%{background:#ff6b6b;}20%{background:#ff9f43;}40%{background:#1dd1a1;}60%{background:#54a0ff;}80%{background:#5f27cd;}100%{background:#ff6b6b;}
+    }
+
+    /* 跑马灯 */
+    .marquee{
+      background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%);
+      color:#fff;font-size:.9rem;white-space:nowrap;overflow:hidden;padding:6px 0;
+    }
     .marquee span{display:inline-block;padding-left:100%;animation:marquee 12s linear infinite;}
     @keyframes marquee{to{transform:translateX(-100%);}}
 
-    .logo-wrap{display:flex;justify-content:center;margin:16px;}
-    .logo{width:120px;height:120px;object-fit:contain;border:3px solid #fff;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.25);}
+    /* Logo */
+    .logo-wrap{display:flex;justify-content:center;margin:12px 0;}
+    .logo{width:100px;height:100px;border:2px solid #fff;border-radius:50%;box-shadow:0 3px 9px rgba(0,0,0,.2);}
 
-    .glass{background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);border-radius:16px;margin:0 12px 12px;padding:14px;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.2);}
-    .hero h1{text-align:center;font-size:1.4rem;color:#fff;text-shadow:0 0 4px #0003;}
-    .steps{font-size:.9rem;line-height:1.7;}
-    .btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-    .btn-grid a{background:rgba(255,255,255,.15);color:#fff;text-decoration:none;padding:12px 8px;border-radius:10px;text-align:center;font-size:.85rem;border:1px solid rgba(255,255,255,.25);}
+    /* 毛玻璃卡片 */
+    .glass{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:14px;margin:8px 12px;padding:12px 14px;color:#fff;}
+    .hero h1{margin:0;font-size:1.3rem;text-align:center;text-shadow:0 0 3px #0003;}
+    .steps{line-height:1.6;font-size:.9rem;margin:0;padding-left:1.2em;}
+
+    /* 紧凑按钮 */
+    .btn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 12px;}
+    .btn-grid a{background:rgba(255,255,255,.18);color:#fff;text-decoration:none;padding:8px;border-radius:8px;text-align:center;font-size:.8rem;}
     .btn-grid a:hover{background:rgba(255,255,255,.25);}
 
-    /* 全宽播放器 */
-    .music-player{padding:0;}
-    .music-player iframe{width:100%;height:140px;border-radius:10px;}
-
-    .scroll-box{margin:0 12px 12px;border-radius:16px;height:420px;overflow:auto;-webkit-overflow-scrolling:touch;box-shadow:0 4px 12px rgba(0,0,0,.2);}
-    .scroll-box iframe{width:100%;height:600px;border:none;}
-    footer{text-align:center;padding:10px;font-size:.7rem;color:#ffffffaa;}
+    /* 可滚动 iframe 容器 */
+    .scroll-box{margin:8px 12px;border-radius:14px;height:400px;overflow:auto;-webkit-overflow-scrolling:touch;}
+    .scroll-box iframe{width:100%;height:100%;border:none;}
+    footer{text-align:center;padding:8px;font-size:.7rem;color:#ffffffaa;}
   </style>
 </head>
 <body>
@@ -42,7 +56,9 @@
     <img class="logo" src="https://upload.cc/i1/2025/08/03/evN6ki.png" alt="Shadowrocket">
   </div>
 
-  <div class="glass hero"><h1>万象苹果共享小火箭</h1></div>
+  <div class="glass hero">
+    <h1>万象苹果共享小火箭</h1>
+  </div>
 
   <ol class="steps glass">
     <li>打开 iPhone/iPad 的蓝色 <strong>App Store</strong>（不要点设置）。</li>
@@ -53,37 +69,21 @@
     <li>下载完成后务必<strong>退出登录</strong>，防止设备被锁！</li>
   </ol>
 
-  <!-- 全宽网易云播放器 -->
-  <div class="glass music-player">
-    <iframe
-      frameborder="0"
-      width="100%"
-      height="140"
-      src="https://music.163.com/outchain/player?type=2&id=1424979&auto=0&height=110"
-      allow="autoplay"
-      style="border-radius:10px;">
-    </iframe>
-  </div>
-
   <div class="glass btn-grid">
-    <a href="https://corichy.com" target="_blank">独享海外苹果ID</a>
-    <a href="https://t.me/freeV2rayi" target="_blank">关注 TG 频道</a>
-    <a href="https://omniele.github.io/iptv" target="_blank">免费 </a>
-    <a href="https://omniele.github.io/tvbox" target="_blank">免费 </a>
-    <a href="https://corich.cc" target="_blank">友链博客</a>
-    <a href="https://github" target="_blank">关注我的 GitHub</a>
+    <a href="https://corichy.com" target="_blank" rel="noopener">独享海外苹果ID</a>
+    <a href="https://t.me/freeV2rayi" target="_blank" rel="noopener">关注 TG 频道</a>
+    <a href="https://omniele.github.io/iptv" target="_blank" rel="noopener">免费 IPTV 订阅</a>
+    <a href="https://omniele.github.io/tvbox" target="_blank" rel="noopener">免费 TVbox 接口</a>
+    <a href="https://corich.cc" target="_blank" rel="noopener">友链博客</a>
+    <a href="https://github.com/omniele" target="_blank" rel="noopener">关注我的 GitHub</a>
   </div>
 
-  <div class="scroll-box">
-    <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496" allow="clipboard-write" scrolling="yes"></iframe>
+  <div class="glass scroll-box">
+    <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496"
+            allow="clipboard-write"
+            scrolling="yes"></iframe>
   </div>
 
   <footer>© 2025 万象苹果 | TG 频道 | GitHub</footer>
-  <script>
-    function copy(text){
-      navigator.clipboard.writeText(text);
-      alert('已复制：' + text);
-    }
-  </script>
 </body>
 </html>
