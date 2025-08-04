@@ -1,89 +1,103 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <!-- 基础 SEO TDK -->
   <meta charset="UTF-8">
-  <title>万象苹果免费小火箭ID共享网 | 海外苹果ID免费共享 Shadowrocket 下载</title>
-  <meta name="description" content="每日更新美国/香港/台湾等海外苹果ID账号，免费下载 Shadowrocket 小火箭，免费节点订阅、IPTV、TVbox 接口，一键导入即用。">
-  <meta name="keywords" content="海外苹果ID,Shadowrocket,免费节点,IPTV,TVbox,小火箭下载,免费苹果ID,美区账号">
+  <title>万象苹果免费小火箭ID共享网 | Shadowrocket 免费下载</title>
+  <meta name="description" content="每日更新美国、香港、台湾等海外苹果ID账号，免费下载 Shadowrocket 小火箭，一键导入永久免费节点、IPTV、TVbox。">
+  <meta name="keywords" content="Shadowrocket,海外苹果ID,免费苹果ID,小火箭下载,免费节点">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="万象苹果">
+  <meta property="og:title" content="万象苹果免费小火箭ID共享网">
+  <meta property="og:description" content="免费海外苹果ID + Shadowrocket 下载 + 永久免费节点">
+  <meta property="og:image" content="https://upload.cc/i1/2025/08/03/evN6ki.png">
+  <meta property="og:type" content="website">
+
   <style>
-    :root{--accent:#4f7bff;}
-    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
-    /* 更绚烂背景渐变 */
+    html,body{height:100%;margin:0;}
     body{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
+      background:linear-gradient(135deg,#ff6b6b,#ff9f43,#1dd1a1,#54a0ff,#5f27cd);
+      background-size:400% 400%;
       animation:bgLoop 20s infinite linear;
+      display:flex;align-items:center;justify-content:center;
+      font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
     @keyframes bgLoop{
-      0%{background:#ff6b6b;}20%{background:#ff9f43;}40%{background:#1dd1a1;}60%{background:#54a0ff;}80%{background:#5f27cd;}100%{background:#ff6b6b;}
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
     }
 
-    /* 跑马灯 */
-    .marquee{
-      background:linear-gradient(90deg,#00c6ff 0%,#0072ff 100%);
-      color:#fff;font-size:.9rem;white-space:nowrap;overflow:hidden;padding:6px 0;
+    .wrapper{
+      width:100%;
+      max-width:420px;
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:18px;
+      padding:24px 20px;
+      color:#fff;
+      box-shadow:0 8px 24px rgba(0,0,0,.25);
     }
-    .marquee span{display:inline-block;padding-left:100%;animation:marquee 12s linear infinite;}
-    @keyframes marquee{to{transform:translateX(-100%);}}
 
-    /* Logo */
-    .logo-wrap{display:flex;justify-content:center;margin:12px 0;}
-    .logo{width:100px;height:100px;border:2px solid #fff;border-radius:50%;box-shadow:0 3px 9px rgba(0,0,0,.2);}
-
-    /* 毛玻璃卡片 */
-    .glass{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:14px;margin:8px 12px;padding:12px 14px;color:#fff;}
-    .hero h1{margin:0;font-size:1.3rem;text-align:center;text-shadow:0 0 3px #0003;}
-    .steps{line-height:1.6;font-size:.9rem;margin:0;padding-left:1.2em;}
-
-    /* 紧凑按钮 */
-    .btn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:0 12px;}
-    .btn-grid a{background:rgba(255,255,255,.18);color:#fff;text-decoration:none;padding:8px;border-radius:8px;text-align:center;font-size:.8rem;}
+    .logo{display:block;width:90px;height:90px;margin:0 auto 12px;border:2px solid #fff;border-radius:50%;}
+    h1{margin:0 0 16px;font-size:1.3rem;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.4);}
+    ol{margin:0 0 16px;padding-left:1.2em;line-height:1.55;font-size:.9rem;}
+    .btn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 16px;}
+    .btn-grid a{background:rgba(255,255,255,.18);color:#fff;text-decoration:none;padding:8px;border-radius:8px;font-size:.8rem;text-align:center;transition:.2s;}
     .btn-grid a:hover{background:rgba(255,255,255,.25);}
 
-    /* 可滚动 iframe 容器 */
-    .scroll-box{margin:8px 12px;border-radius:14px;height:400px;overflow:auto;-webkit-overflow-scrolling:touch;}
-    .scroll-box iframe{width:100%;height:100%;border:none;}
-    footer{text-align:center;padding:8px;font-size:.7rem;color:#ffffffaa;}
+    /* 强制可滚动 iframe 容器 */
+    .scroll-box{
+      height:320px;
+      border-radius:8px;
+      overflow:auto;               /* 关键：允许滚动 */
+      -webkit-overflow-scrolling:touch;
+    }
+    /* iframe 本身也声明滚动 */
+    .scroll-box iframe{
+      width:100%;
+      height:100%;
+      border:none;
+      scrolling:"yes";
+    }
+
+    footer{text-align:center;font-size:.7rem;color:#ffffffaa;margin-top:12px;}
   </style>
 </head>
+
 <body>
-  <div class="marquee"><span>🔔 万象苹果共享小火箭 - 免费账号每日更新 - 关注 Telegram 频道！</span></div>
-
-  <div class="logo-wrap">
+  <div class="wrapper">
     <img class="logo" src="https://upload.cc/i1/2025/08/03/evN6ki.png" alt="Shadowrocket">
+    <h1>万象苹果小火箭ID分享网,shadowrocket账号共享</h1>
+
+    <ol>
+      <li>打开 iPhone/iPad 的蓝色 App Store（不要点设置）。</li>
+      <li>右上角点头像 → 滑到最底 → 退出登录。</li>
+      <li>复制下方账号与密码。</li>
+      <li>登录时若提示 Apple ID 安全，选“其他选项 → 不升级”。</li>
+      <li>搜索 Shadowrocket 并下载。</li>
+      <li>下载完成后务必退出登录，防止设备被锁！</li>
+    </ol>
+
+    <div class="btn-grid">
+      <a href="https://corichy.com" target="_blank" rel="noopener">独享海外苹果ID</a>
+      <a href="https://t.me/freeV2rayi" target="_blank" rel="noopener">关注 TG 频道</a>
+      <a href="https://omniele.github.io/iptv" target="_blank" rel="noopener">免费 IPTV</a>
+      <a href="https://omniele.github.io/tvbox" target="_blank" rel="noopener">免费 TVbox</a>
+      <a href="https://corich.cc" target="_blank" rel="noopener">友链博客</a>
+      <a href="https://github.com/omniele" target="_blank" rel="noopener">关注 GitHub</a>
+    </div>
+
+    <!-- 可滚动 iframe -->
+    <div class="scroll-box">
+      <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496"
+              width="100%"
+              height="100%"
+              scrolling="yes"
+              frameborder="0"></iframe>
+    </div>
+
+    <footer>© 2025 万象苹果 | TG 频道 | GitHub</footer>
   </div>
-
-  <div class="glass hero">
-    <h1>万象苹果共享小火箭</h1>
-  </div>
-
-  <ol class="steps glass">
-    <li>打开 iPhone/iPad 的蓝色 <strong>App Store</strong>（不要点设置）。</li>
-    <li>右上角点头像 → 滑到最底 → <strong>退出登录</strong>。</li>
-    <li>复制下方账号与密码。</li>
-    <li>登录时若提示 Apple ID 安全，选 <strong>其他选项 → 不升级</strong>。</li>
-    <li>搜索 <strong>Shadowrocket</strong> 并下载。</li>
-    <li>下载完成后务必<strong>退出登录</strong>，防止设备被锁！</li>
-  </ol>
-
-  <div class="glass btn-grid">
-    <a href="https://corichy.com" target="_blank" rel="noopener">独享海外苹果ID</a>
-    <a href="https://t.me/freeV2rayi" target="_blank" rel="noopener">关注 TG 频道</a>
-    <a href="https://omniele.github.io/iptv" target="_blank" rel="noopener">免费 IPTV 订阅</a>
-    <a href="https://omniele.github.io/tvbox" target="_blank" rel="noopener">免费 TVbox 接口</a>
-    <a href="https://corich.cc" target="_blank" rel="noopener">友链博客</a>
-    <a href="https://github.com/omniele" target="_blank" rel="noopener">关注我的 GitHub</a>
-  </div>
-
-  <div class="glass scroll-box">
-    <iframe src="https://s.jiesuo.one/s/ee00090bf96c4af9aa3f06a181818496"
-            allow="clipboard-write"
-            scrolling="yes"></iframe>
-  </div>
-
-  <footer>© 2025 万象苹果 | TG 频道 | GitHub</footer>
 </body>
 </html>
